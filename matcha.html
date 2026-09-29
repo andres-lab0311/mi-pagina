@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Matcha · el té verde en calma</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbfdf6;--card:#ffffff;--ink:#23331f;--muted:#5d6f57;--g1:#6f9a3a;--g2:#dfeccb;--y:#f3d95c;--y2:#fff6c9;--line:#dbe6c9;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141b11;--card:#1c2618;--ink:#eef4e2;--muted:#a9bb9e;--g1:#9cc95a;--g2:#26351f;--y:#f3d95c;--y2:#2e2a10;--line:#2f3f28}}
+:root[data-theme="dark"]{--bg:#141b11;--card:#1c2618;--ink:#eef4e2;--muted:#a9bb9e;--g1:#9cc95a;--g2:#26351f;--y:#f3d95c;--y2:#2e2a10;--line:#2f3f28}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.05rem/1.6 Nunito,system-ui,sans-serif}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:600;line-height:1.15;margin:0}
+section{max-width:960px;margin:0 auto;padding:56px 22px}
+h2{font-size:clamp(1.7rem,4vw,2.3rem);margin-bottom:8px}
+.sub{color:var(--muted);margin:0 0 28px;max-width:52ch}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center;padding-top:40px}
+.hero h1{font-size:clamp(2.6rem,8vw,4.6rem)}
+.hero p{color:var(--muted);max-width:40ch;margin:14px 0 22px}
+.btn{display:inline-block;background:var(--g1);color:#fff;border:0;border-radius:999px;padding:12px 24px;font:600 1rem Nunito,sans-serif;cursor:pointer;text-decoration:none}
+.btn:focus-visible,a:focus-visible{outline:3px solid var(--y);outline-offset:3px}
+.hero svg{width:100%;height:auto}
+.band{background:var(--g2);max-width:none;padding:0}
+.band>div{max-width:960px;margin:0 auto;padding:56px 22px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.item{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px}
+.item h3{font-size:1.15rem;margin:8px 0 4px}
+.item p{margin:0;color:var(--muted);font-size:.97rem}
+.dot{display:inline-grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--y2);font-size:1.3rem}
+.steps{list-style:none;counter-reset:s;margin:0;padding:0;display:grid;gap:12px}
+.steps li{counter-increment:s;display:flex;gap:14px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 18px}
+.steps li::before{content:counter(s);flex:none;width:32px;height:32px;border-radius:50%;background:var(--y);color:#3b3300;font-weight:600;display:grid;place-items:center}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.when{border-radius:18px;padding:22px}
+.yes{background:var(--y2);border:1px solid var(--y)}
+.no{background:var(--card);border:1px solid var(--line)}
+.when ul{margin:10px 0 0;padding-left:20px;color:var(--muted)}
+.quote{text-align:center;background:var(--y2);max-width:none}
+.quote blockquote{font:400 clamp(1.5rem,4vw,2.3rem)/1.3 Fraunces,Georgia,serif;margin:0 auto 22px;max-width:24ch;min-height:4.2em;display:grid;place-items:center}
+footer{text-align:center;color:var(--muted);padding:28px 22px 40px;font-size:.9rem}
+@media(max-width:720px){.hero,.two{grid-template-columns:1fr}.hero svg{max-width:320px;margin:0 auto}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<section class="hero">
+<div>
+<h1>Matcha</h1>
+<p>Té verde en polvo de Japón. Se toma la hoja entera, por eso concentra más nutrientes.</p>
+<a class="btn" href="#preparar">Aprender a prepararlo</a>
+</div>
+<svg viewBox="0 0 360 320" role="img" aria-label="Tazón de matcha con batidor de bambú y hojas">
+<circle cx="180" cy="160" r="140" fill="#f3d95c" opacity=".35"/>
+<path d="M60 90c40-30 70 0 70 40-40 20-80 0-70-40z" fill="#6f9a3a"/>
+<path d="M60 90c25 15 45 30 70 40" stroke="#dfeccb" stroke-width="3" fill="none"/>
+<path d="M300 70c-40-25-70 5-64 45 38 15 74-5 64-45z" fill="#8fb95a"/>
+<path d="M300 70c-25 18-45 32-64 45" stroke="#dfeccb" stroke-width="3" fill="none"/>
+<ellipse cx="180" cy="150" rx="105" ry="24" fill="#fff"/>
+<path d="M75 150c0 78 46 122 105 122s105-44 105-122z" fill="#fff" stroke="#dbe6c9" stroke-width="4"/>
+<ellipse cx="180" cy="152" rx="94" ry="17" fill="#6f9a3a"/>
+<ellipse cx="160" cy="150" rx="40" ry="6" fill="#9cc95a" opacity=".8"/>
+<path d="M105 215c50 20 100 20 150 0" stroke="#f3d95c" stroke-width="6" fill="none" stroke-linecap="round"/>
+<g stroke="#c9a96a" stroke-width="4" stroke-linecap="round" fill="none"><path d="M300 250v-40M290 210c-4 20 4 20 0 0M300 210c0 20 0 20 0 0M310 210c4 20-4 20 0 0"/></g>
+</svg>
+</section>
+
+<div class="band"><div>
+<h2>Qué le aporta a tu cuerpo</h2>
+<p class="sub">Lo esencial de cada taza.</p>
+<div class="grid">
+<div class="item"><span class="dot">🌿</span><h3>Antioxidantes</h3><p>Rico en catequinas (EGCG) que ayudan a combatir el estrés oxidativo.</p></div>
+<div class="item"><span class="dot">🧘</span><h3>L-teanina</h3><p>Aminoácido que favorece calma y concentración.</p></div>
+<div class="item"><span class="dot">⚡</span><h3>Cafeína suave</h3><p>Unos 30–70 mg por taza; energía más estable, sin tanto bajón.</p></div>
+<div class="item"><span class="dot">🍃</span><h3>Clorofila</h3><p>Le da su verde intenso; viene de cultivarlo a la sombra.</p></div>
+<div class="item"><span class="dot">🌱</span><h3>Vitaminas y minerales</h3><p>Pequeñas cantidades de vitamina C, potasio y magnesio.</p></div>
+<div class="item"><span class="dot">🥄</span><h3>Fibra</h3><p>Al consumir la hoja molida, aporta algo de fibra.</p></div>
+</div>
+</div></div>
+
+<section id="preparar">
+<h2>Cómo prepararlo</h2>
+<p class="sub">Cuatro pasos, dos minutos.</p>
+<ol class="steps">
+<li>Tamiza 1–2 g de matcha (½ cucharadita) en un tazón para evitar grumos.</li>
+<li>Añade 60–80 ml de agua a unos 70–80 °C. Hirviendo lo vuelve amargo.</li>
+<li>Bate en zigzag con el batidor de bambú (o un minibatidor) hasta que haga espuma.</li>
+<li>Bébelo enseguida. También puedes sumarle leche caliente o fría para un latte.</li>
+</ol>
+</section>
+
+<div class="band"><div>
+<h2>Cuándo tomarlo</h2>
+<p class="sub">El momento importa por la cafeína.</p>
+<div class="two">
+<div class="when yes"><h3>Buenos momentos</h3><ul><li>Por la mañana, en lugar del café</li><li>Antes de estudiar o trabajar</li><li>30–60 min antes de entrenar</li><li>A media tarde, para un empujón suave</li></ul></div>
+<div class="when no"><h3>Mejor evitar</h3><ul><li>Cerca de la hora de dormir</li><li>Con el estómago totalmente vacío si te cae pesado</li><li>Más de 2–3 tazas al día</li></ul></div>
+</div>
+<p class="sub" style="margin-top:18px">Si estás embarazada, tienes alguna condición médica o eres sensible a la cafeína, consulta a tu médico.</p>
+</div></div>
+
+<section class="quote">
+<blockquote id="q">Una taza a la vez, un respiro a la vez.</blockquote>
+<button class="btn" id="nx" type="button">Otra frase</button>
+</section>
+
+<footer>Matcha · calma, naturaleza y una taza verde.</footer>
+
+<script>
+var f=["Una taza a la vez, un respiro a la vez.","Bate despacio: la calma también se prepara.","Hoy no corras. Deja que el té enfríe tus prisas.","Lo verde crece en silencio, tú también.","En cada sorbo cabe una pausa.","La paz cabe en un tazón pequeño.","Respira hondo, el té ya está listo.","Cuida tu energía como cuidas tu té."];
+var i=0,q=document.getElementById("q");
+document.getElementById("nx").onclick=function(){i=(i+1)%f.length;q.textContent=f[i]};
+</script>
+</body>
+</html>
